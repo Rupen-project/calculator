@@ -8,11 +8,11 @@ pipeline {
                  credentialsId: 'git-cred'
             }
         }
-        stage('stage-2 Build maven project') {
-            steps {
-                sh "mvn -B -DskipTests clean package"
-            }
-        }
+//         stage('stage-2 Build maven project') {
+//             steps {
+//                 sh "mvn -B -DskipTests clean package"
+//             }
+//         }
 
         stage('stage-3 Test build project') {
             steps {
