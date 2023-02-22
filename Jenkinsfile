@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('stage-1 Git pull') {
             steps {
-                 git url: 'https://github.com/sanir456/ScientificCalculatorDevops.git', branch: 'master',
+                 git url: 'https://github.com/Rupen-project/calculator.git', branch: 'master',
                  credentialsId: 'git-cred'
             }
         }
