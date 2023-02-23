@@ -16,7 +16,7 @@ pipeline {
 
         stage('stage-3 Test build project') {
             steps {
-                sh "mvn --version"
+                sh "/opt/homebrew/bin/mvn --version"
             }
         }
     }
