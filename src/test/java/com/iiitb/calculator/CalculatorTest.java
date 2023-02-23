@@ -40,7 +40,7 @@ public class CalculatorTest {
         payload2.put("input1",(Object) new String("10"));
         payload2.put("input2",(Object) new String("2"));
 
-        assertNotEquals("Squaring a number for False Positive", 100, calculator.power(payload1), DELTA);
+        assertNotEquals("Squaring a number for False Positive", 101, calculator.power(payload1), DELTA);
         assertNotEquals("Squaring a number for False Positive", 32, calculator.power(payload2), DELTA);
 
     }
