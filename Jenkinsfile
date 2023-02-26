@@ -30,7 +30,7 @@ pipeline {
                     steps{
                         script {
 //                             dockerImage = docker.build registry + ":latest"
-                                sh 'docker build -t' + registry +':latest .'
+                                sh '/opt/homebrew/bin/docker build -t' + registry +':latest .'
                         }
                     }
                 }
