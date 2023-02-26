@@ -1,5 +1,11 @@
 pipeline {
 
+    environment {
+            registry = "rupen28/calculator-devopstools-webapp"
+            registryCredential = 'docker-cred'
+            dockerImage = ''
+        }
+
     agent any
     stages {
         stage('stage-1 Git pull') {
@@ -17,6 +23,24 @@ pipeline {
         stage('stage-3 Test build project') {
             steps {
                 sh "/opt/homebrew/bin/mvn test"
+            }
+        }
+
+        stage('stage-4 Build docker image in local machine') {
+                    steps{
+                        script {
+                            dockerImage = docker.build registry + ":latest"
+                        }
+                    }
+                }
+
+        stage('stage- 5 Push docker image to dockerhub') {
+            steps{
+                script {
+                    docker.withRegistry( '', registryCredential ) {
+                    dockerImage.push()
+                    }
+                }
             }
         }
     }
