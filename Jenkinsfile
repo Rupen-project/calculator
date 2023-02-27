@@ -29,8 +29,8 @@ pipeline {
         stage('stage-4 Build docker image in local machine') {
                     steps{
                         script {
-                            dockerImage = docker.build (registry + ":latest")
-//                                 sh '/opt/homebrew/bin/docker build -t' + registry +':latest .'
+//                             dockerImage = docker.build (registry + ":latest")
+                                sh '/usr/local/bin/docker build -t' + registry +':latest .'
                         }
                     }
                 }
