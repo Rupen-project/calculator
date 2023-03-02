@@ -29,8 +29,9 @@ pipeline {
         stage('stage-4 Build docker image in local machine') {
                     steps{
                         script {
-//                             dockerImage = docker.build (registry + ":latest")
-                                sh '/usr/local/bin/docker build -t' + registry +':latest .'
+                                docker=sh'/usr/local/bin/docker'
+                            dockerImage = docker.build (registry + ":latest")
+//                                 dockerImage = sh '/usr/local/bin/docker build -t' + registry +':latest .'
                         }
                     }
                 }
@@ -38,6 +39,7 @@ pipeline {
         stage('stage- 5 Push docker image to dockerhub') {
             steps{
                 script {
+
                     docker.withRegistry( '', registryCredential ) {
                     dockerImage.push()
                     }
