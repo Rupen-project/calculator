@@ -41,7 +41,7 @@ pipeline {
                 script {
 
                     sh '/usr/local/bin/docker login -u "rupen28" -p "Rupen2812@"'
-                    sh '/usr/local/bin/docker push registry:latest'
+                    sh '/usr/local/bin/docker push' + registry+ ':latest'
 //                     docker.withRegistry( '', registryCredential ) {
 //                     dockerImage.push()
 //                     }`
