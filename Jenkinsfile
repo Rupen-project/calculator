@@ -31,7 +31,8 @@ pipeline {
                         script {
 //                                 docker=sh'/usr/local/bin/docker'
 //                             dockerImage = docker.build (registry + ":latest")
-                                dockerImage = sh '/usr/local/bin/docker build -t' + registry +':latest .'
+
+                                dockerImage = sh '/usr/local/bin/docker buildx build --platform=linux/amd64 -t rupen28/calculator-devopstools-webapp:latest .'
                         }
                     }
                 }
