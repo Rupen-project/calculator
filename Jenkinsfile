@@ -48,5 +48,11 @@ pipeline {
                 }
             }
         }
+
+        stage("Ansible Stage"){
+            steps{
+                sh 'ansible-playbook playbook.yaml'
+            }
+        }
     }
 }

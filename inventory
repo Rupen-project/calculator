@@ -1,0 +1,2 @@
+[client1]
+172.16.201.120 ansible_ssh_user=rupen ansible_sudo_user=rupen ansible_sudo_pass=6758

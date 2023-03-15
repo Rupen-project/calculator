@@ -1,14 +1,12 @@
 package com.iiitb.calculator;
 
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 import java.util.Map;
 
 @RestController
+@CrossOrigin("*")
 public class Calculator {
 
     @RequestMapping(value = "/power",method = RequestMethod.POST)
