@@ -64,7 +64,7 @@
     <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
-        <version>4.4</version>
+        <version>4.13.20</version>
         <scope>test</scope>
     </dependency>
     <!-- https://m...content-available-to-author-only...y.com/artifact/org.apache.logging.log4j/log4j-api -->
