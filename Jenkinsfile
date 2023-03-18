@@ -29,9 +29,6 @@ pipeline {
         stage('stage-4 Build docker image in local machine') {
                     steps{
                         script {
-//                                 docker=sh'/usr/local/bin/docker'
-//                             dockerImage = docker.build (registry + ":latest")
-
                                 dockerImage = sh '/usr/local/bin/docker buildx build --platform=linux/amd64 -t rupen28/calculator-devopstools-webapp:latest .'
                         }
                     }
@@ -43,9 +40,7 @@ pipeline {
 
                     sh '/usr/local/bin/docker login -u "rupen28" -p "Rupen2812@"'
                     sh '/usr/local/bin/docker push ' + registry+ ':latest'
-//                     docker.withRegistry( '', registryCredential ) {
-//                     dockerImage.push()
-//                     }`
+
                 }
             }
         }
