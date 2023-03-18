@@ -1,23 +1,36 @@
 package com.iiitb.calculator;
 
-import org.springframework.web.bind.annotation.*;
+import java.util.Scanner;
 
 
-import java.util.Map;
-
-@RestController
-@CrossOrigin("*")
 public class Calculator {
 
-    @RequestMapping(value = "/power",method = RequestMethod.POST)
-    public double power(@RequestBody Map<String,Object> payload){
-        double res;
-        double input1 = Double.parseDouble((String) payload.get("input1"));
-        double input2 = Double.parseDouble((String) payload.get("input2"));
-        res = Math.pow(input1,input2);
-        return res  ;
+
+    public int add(int a, int b){
+        return a+b;
     }
-
-
-
+    public void run() {
+        int num1, num2, num3;
+        boolean flag = true;
+        char choice;
+        Scanner scan = new Scanner(System.in);
+        while(flag){
+            try{
+                System.out.println("Enter your two integers(space separated)");
+                num1 = scan.nextInt();
+                num2 = scan.nextInt();
+                num3 = add(num1,num2);
+                System.out.println(num3);
+                System.out.println("You wanna continue (Y/N) ? : ");
+                choice = scan.next().charAt(0);
+                if(choice!='Y'){
+                    flag = false;
+                }
+            }
+            catch(Exception e){
+                System.out.println(e);
+                return;
+            }
+        }
+    }
 }

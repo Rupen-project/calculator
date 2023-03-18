@@ -9,3 +9,4 @@
       shell:
         docker stop rupen_calc&&docker rm rupen_calc&&docker run -d --name rupen_calc rupen28/calculator-devopstools-webapp:latest
 #        &&gnome-terminal -- bash -c "docker attach calc; exec bash"
+#        &&gnome-terminal -- bash -c "docker attach calc; exec bash"
