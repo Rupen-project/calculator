@@ -7,4 +7,4 @@
         docker pull rupen28/calculator-devopstools-webapp:latest
     - name: create container using pulled image
       shell:
-        docker stop rupen_calc&&docker rm rupen_calc&&docker run -itd --name rupen_calc rupen28/calculator-devopstools-webapp:latest
+        docker stop rupen_calc&&docker rm rupen_calc&&docker run -itd -v ${PWD}/logs:/logs --name rupen_calc rupen28/calculator-devopstools-webapp:latest
