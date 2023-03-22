@@ -10,7 +10,7 @@ class CalcOperations{
     private static final Logger logger = LogManager.getLogger("calculator");
     public double add(double a,double b){
         double ans = a+b;
-            logger.info(" - [ADDITION ] of "+a+" AND "+b+" - [RESULT] : "+ ans);
+            logger.info(" - [ADDITION] of "+a+" AND "+b+" - [RESULT] : "+ ans);
         return ans;
     }
 
