@@ -107,11 +107,12 @@ public class Calculator {
                     System.out.print("Provide any positive integer number in range (1-20) : ");
                     ni = scanner.nextInt();
 
-                }else if(op == 7){
-                    System.out.print("Provide any non-negative real number : ");
-                    num1 = scanner.nextDouble();
                 }
-                else if(op>=1 && op<=8){
+//                else if(op == 7){
+//                    System.out.print("Provide any non-negative real number : ");
+//                    num1 = scanner.nextDouble();
+//                }
+                else if(op>=1 && op<=8 && op!=7){
                     System.out.print("Provide 1st operand : ");
                     num1 = scanner.nextDouble();
                     System.out.print("Provide 2nd operand : ");
@@ -141,9 +142,9 @@ public class Calculator {
                     case 6:
                         System.out.println(ni + "! is " +calcOperations.factorial(ni)+"\n\n");
                         break;
-                    case 7:
-                        System.out.println("ln("+num1+") is "+ calcOperations.naturalLog(num1)+"\n\n");
-                        break;
+//                    case 7:
+//                        System.out.println("ln("+num1+") is "+ calcOperations.naturalLog(num1)+"\n\n");
+//                        break;
                     case 8:
                         System.out.println("pow("+num1+","+num2+") is "+ calcOperations.power(num1,num2)+"\n\n");
                         break;
